@@ -1,4 +1,6 @@
 'use strict';
 
+import {getRepos} from '../src/index.js'; 
 
-console.log('hello');
+const btnRepos = document.getElementById('btnRepos');
+btnRepos.addEventListener('click', getRepos);
