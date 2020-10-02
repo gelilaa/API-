@@ -352,7 +352,8 @@ html, body {
 }
 
 .portfolio-item {
-    background: url('http://iot.ed.ac.uk/files/2018/05/if_github_1608908-1.png') center center no-repeat;
+    background-image: url('http://iot.ed.ac.uk/files/2018/05/if_github_1608908-1.png');
+    background-repeat: no-repeat;
     height: 280px;
     margin-bottom: 30px;
     position: relative;

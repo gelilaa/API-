@@ -70,14 +70,22 @@
 
 
     render() {
+        debugger
         const container = document.createElement('div');
         container.id = this.id;
         container.className = 'col-md-4 col-xs-6 portfolio-item'
         container.innerHTML = this.language;
-        if (this.languege === false) {
-            container.innerHTML = 'Markup'
+        
+        fetch('https://api.unsplash.com/photos/random/?orientation=landscape&count=10&client_id=Ti4fqnZ5zWYAvZ7NH3GS48L9wYShB62GF1lyoighOII')
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
+                data.forEach(function (image) {
+                    container.style.background = `url(${image.urls.thumb})center center no-repeat`;
+                });
+            });;
+       
 
-        }
 
         const checkEl = document.createElement('a');
         checkEl.innerHTML = this.name;
@@ -94,7 +102,6 @@
 
         return container;
     }
-
 
 
 
